@@ -1,5 +1,48 @@
-h1 {
-  font-family: "indie flower", cursive;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #032152;
+  color: white;
+  font-family: "Indie Flower", cursive;
+}
+
+.content {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.content .dice {
+  display: inline-block;
+  text-align: center;
+}
+.content h1 {
+  margin: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-shadow: 4px rgba(5, 5, 12, 0.562);
+  color: rgb(70, 144, 146);
+  font-size: 8rem;
+}
+.content h2 {
+  font-size: 2rem;
+  color: rgb(70, 144, 146);
+}
+.content img {
+  width: 80%;
+}
+
+.footer {
+  margin-top: 10%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
