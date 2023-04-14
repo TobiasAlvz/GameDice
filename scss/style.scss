@@ -1,54 +1,111 @@
+$primary-color: #469092;
+$secondary-color: #084c61;
+$background-color: #032152;
+$text-color: #ffffff;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #032152;
-  color: white;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
   font-family: "Indie Flower", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .content {
-  width: 70%;
-  margin: auto;
+  background-color: $background-color;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice {
+  display: inline-block;
+
   text-align: center;
+}
 
-  .dice {
-    display: inline-block;
-    text-align: center;
-  }
+#roll-btn {
+  background-color: $secondary-color;
+  border: none;
+  color: $text-color;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin: 2rem auto 0;
+  display: block;
+  transition: background-color 0.3s;
 
-  h1 {
-    margin: 30px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    text-shadow: 4px rgba(5, 5, 12, 0.562);
-    color: rgb(70, 144, 146);
-    font-size: 8rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    color: rgb(70, 144, 146);
-  }
-
-  img {
-    width: 80%;
+  &:hover {
+    background-color: lighten($secondary-color, 10%);
   }
 }
+
+h1 {
+  margin: 3rem 0 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-shadow: 4px rgba(5, 5, 12, 0.562);
+  color: $primary-color;
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: $primary-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .footer {
-  margin-top: 10%;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  padding: 1rem;
+  background-color: $background-color;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
 
-  a {
-    text-decoration: none;
-    color: white;
-    transition: 0.5s;
+.footer > a {
+  text-decoration: none;
+  color: $text-color;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
   }
 }
 
-.footer > span {
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .footer {
+    font-size: 0.6rem;
+  }
 }
