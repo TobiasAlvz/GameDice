@@ -17,24 +17,24 @@ body {
   background-color: #032152;
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
 }
 
 .dice {
-  display: inline-block;
   text-align: center;
+  margin: 0 0.5rem 1rem;
 }
 
 #roll-btn {
-  background-color: #084c61;
-  border: none;
+  background-color: #032152;
+  border: solid;
   color: #ffffff;
   font-size: 1.5rem;
-  padding: 1rem 2rem;
-  margin: 2rem auto 0;
-  display: block;
+  padding: 10px 15px;
+  display: inline-block;
   transition: background-color 0.3s;
 }
 #roll-btn:hover {
@@ -48,11 +48,15 @@ h1 {
   color: #469092;
   font-size: 5rem;
   line-height: 1.2;
+  text-align: center;
+  flex-basis: 100%;
 }
 
 h2 {
   font-size: 1.5rem;
   color: #469092;
+  text-align: center;
+  flex-basis: 100%;
 }
 
 img {
@@ -61,6 +65,7 @@ img {
 }
 
 .footer {
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   display: flex;
@@ -70,6 +75,7 @@ img {
   background-color: #032152;
   backdrop-filter: blur(5px);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+  flex-basis: 100%;
 }
 
 .footer > a {
@@ -95,6 +101,9 @@ img {
   }
   .footer {
     font-size: 0.6rem;
+  }
+  .dice {
+    margin: 0 0.25rem 0.5rem;
   }
 }
 
